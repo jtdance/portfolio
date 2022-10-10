@@ -9,17 +9,17 @@ function Header({}: Props) {
     <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
         <motion.div 
             initial={{
-                x: -500,
+                y: 500,
                 opacity: 0,
                 scale: 0.5
             }}
             animate={{
-                x: 0,
+                y: 0,
                 opacity: 1,
                 scale: 1,
             }}
             transition={{
-                duration: 1.5,
+                duration: 1.2,
             }}
             className='flex flex-row items-center'>
            
@@ -41,7 +41,7 @@ function Header({}: Props) {
                 scale: 1,
             }}
             transition={{
-                duration: 1.5
+                duration: 1.2
             }}
             className='flex flex-row items-center text-gray-300 cursor-pointer'>
             <SocialIcon 

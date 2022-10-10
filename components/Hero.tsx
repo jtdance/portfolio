@@ -1,20 +1,22 @@
 import React from 'react'
 import { useTypewriter, Cursor} from 'react-simple-typewriter'
+import BackgroundCircles from './BackgroundCircles';
 
 type Props = {}
 
-export default function Hero({}: Props) {
+function Hero({}: Props) {
     const [text] = useTypewriter({
     words: [
         "Hello, My name is Justin Dance",
-        "Guy-who-loves-Monster.tsx",
+        "Guy-who-loves-monster.tsx",
         "<ButLovesToCodeMore />"
         ],
     loop: true,
     delaySpeed: 2000,
     })
   return (
-    <div>
+      <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+          <BackgroundCircles />
         <h1>
             <span>{text}</span>
             <Cursor cursorColor='#f7ab0a' />
@@ -22,3 +24,5 @@ export default function Hero({}: Props) {
     </div>
   );
 }
+
+export default Hero
